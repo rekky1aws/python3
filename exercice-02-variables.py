@@ -43,7 +43,7 @@ nd=round(1.62, 1)
 tna=float(na)
 tnb=int(nb)
 tnc=int(nc)
-tnd=int(nc)
+tnd=nd
 
 print(na, "->", tna)
 print(nb, "->", tnb)
