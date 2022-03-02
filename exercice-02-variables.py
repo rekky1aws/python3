@@ -37,13 +37,13 @@ print(round(1 / 3, 4))
 # réponse 2.2
 na=2
 nb=1.62
-nc=round(1.62)
-nd=round(1.62, 1)
+nc=1.62
+nd=1.62
 
 tna=float(na)
 tnb=int(nb)
-tnc=int(nc)
-tnd=nd
+tnc=int(round(nc))
+tnd=round(nd, 1)
 
 print(na, "->", tna)
 print(nb, "->", tnb)
