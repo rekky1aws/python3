@@ -1,5 +1,4 @@
-# coding=utf-8
- # coding=utf-8 # exercice-03-operateurs.py
+# exercice-03-operateurs.py
 
 # exo 3.1
 # Alice est née le 10 février 1988.

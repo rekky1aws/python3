@@ -1,4 +1,3 @@
-# coding=utf-8
 # exercice-04-conditions.py
 
 import random
