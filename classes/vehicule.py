@@ -9,7 +9,7 @@ class Vehicule:
 		self._PTAC = ptac
 		self.set_vitesse(vitesse)
 
-	def __str__(self): # Ce que retourne cette fonction sera affiché lorsque l'on voudra afficher ( avec print() ) un objet de cette classe
+	def __str__(self) -> str: # Ce que retourne cette fonction sera affiché lorsque l'on voudra afficher ( avec print() ) un objet de cette classe
 		return f"Objet (Voiture) : \n>\tMarque : {self._marque}\n>\tModele: {self._modele}\n>\tCarburant : {self._carburant}\n>\tVitesse : {self._vitesse}"
 
 	# GETTERS
@@ -28,10 +28,10 @@ class Vehicule:
 	def get_PTAC (self) -> int:
 		return self._PTAC
 
-	def PTAC_en_kg(self):
+	def PTAC_en_kg(self) -> str :
 		return f"{self.get_PTAC()} kg"
 
-	def PTAC_en_T(self):
+	def PTAC_en_T(self) -> str:
 		return f"{self.get_PTAC()/1000} tonnes"
 
 	# SETTERS
