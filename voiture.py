@@ -1,5 +1,5 @@
 class Voiture:
-	def __init__(self, marque: str, modele: str, carburant: str, type_carrosserie: str, vitesse=0): # Constructeur de l'objet
+	def __init__(self, marque: str, modele: str, carburant: str, type_carrosserie: str, vitesse:int=0): # Constructeur de l'objet
 		self._marque = marque
 		self._modele = modele
 		self._carburant = carburant
@@ -25,8 +25,11 @@ class Voiture:
 		return self._vitesse
 
 	def set_vitesse (self, vitesse):
-		self._vitesse = vitesse
-
+		if type(vitesse) is int:
+			self._vitesse = vitesse
+		else:
+			self._vitesse=0
+			print("La vitesse doit etre un nombre entier, par défaut elle a été mise à 0")
 
 
 

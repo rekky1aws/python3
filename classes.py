@@ -1,7 +1,7 @@
 # Nécessite la présence de voiture.py dans le même dossier.
 from voiture import Voiture
 
-v1 = Voiture("Renault", "Modus", "Diesel", "Monospace")
+v1 = Voiture("Renault", "Modus", "Diesel", "Monospace", "non")
 v2 = Voiture("Ford", "Mustang 68", "Essence", "MuscleCar")
 
 print(v1)
