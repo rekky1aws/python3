@@ -1,3 +1,4 @@
+# Nécessite la présence de voiture.py dans le même dossier.
 from voiture import Voiture
 
 v1 = Voiture("Renault", "Modus", "Diesel", "Monospace")
