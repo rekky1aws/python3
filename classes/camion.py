@@ -1,7 +1,6 @@
 from vehicule import Vehicule
 
 class Camion(Vehicule):
-	# volume a ajouter en plus des propriétés de la classse Vehicule
 	def __init__(self, marque:str, modele:str, carburant:str, ptac:int, volume:int, vitesse:int=0):
 		self._marque=marque
 		self._modele=modele

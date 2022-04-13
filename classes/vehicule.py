@@ -1,6 +1,8 @@
 class Vehicule:
 	"""
 		Cette classe permet de créer des vehicules en fonction de leur marque, leur modele, leur type de carburant, leur type de carrosserie, leur poids total a charge en kilos et leur vitesse.
+		Attention c'est une classe abstraite.
+		Elle est destinéee à être étendue par des classes enfants.
 	"""
 	def __init__(self, marque: str, modele: str, carburant: str, ptac:int, vitesse:int=0): # Constructeur de l'objet
 		self._marque = marque
