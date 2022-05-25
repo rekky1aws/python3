@@ -1,5 +1,7 @@
 #exercice-02-variables.py
 
+'''Exercice numéro 2'''
+
 # exo 2.1
 # Affectez :
 # - le nombre 42 à une variable
@@ -10,11 +12,11 @@
 # Affichez ces variables
 
 # réponse 2.1
-nombre=42
-nombre_dor=1.61
-nom_prenom="HOCHART Donatien"
-matin=bool(True)
-val_null=None
+NOMBRE=42
+NOMBRE_DOR=1.61
+NOM_PRENOM="HOCHART Donatien"
+MATIN=bool(True)
+VAL_NULL=None
 
 # code 2.1
 # la fonction `round()` permet d'arrondir un float en un integer
@@ -35,17 +37,17 @@ print(round(1 / 3, 4))
 # À chaque fois stockez le résultat dans une variable et affichez le résultat.
 
 # réponse 2.2
-na=2
-nb=1.62
-nc=1.62
-nd=1.62
+NA=2
+NB=1.62
+NC=1.62
+ND=1.62
 
-tna=float(na)
-tnb=int(nb)
-tnc=int(round(nc))
-tnd=round(nd, 1)
+tna=float(NA)
+TNB=int(NB)
+tnc=int(round(NC))
+tnd=round(ND, 1)
 
-print(na, "->", tna)
-print(nb, "->", tnb)
-print(nc, "->", tnc)
-print(nd, "->", tnd)
+print(NA, "->", tna)
+print(NB, "->", TNB)
+print(NC, "->", tnc)
+print(ND, "->", tnd)

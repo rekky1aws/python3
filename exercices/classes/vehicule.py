@@ -12,7 +12,7 @@ class Vehicule:
 		self.set_vitesse(vitesse)
 
 	def __str__(self) -> str: # Ce que retourne cette fonction sera affiché lorsque l'on voudra afficher ( avec print() ) un objet de cette classe
-		return f"Objet (Voiture) : \n>\tMarque : {self._marque}\n>\tModele: {self._modele}\n>\tCarburant : {self._carburant}\n>\tVitesse : {self._vitesse}"
+		return f"Objet (Vehicule) : \n>\tMarque : {self._marque}\n>\tModele: {self._modele}\n>\tCarburant : {self._carburant}\n>\tVitesse : {self._vitesse}"
 
 	# GETTERS
 	def get_marque (self) -> str:
@@ -49,7 +49,3 @@ class Vehicule:
 
 	def ralentir (self):
 		self._vitesse-=10
-
-
-
-

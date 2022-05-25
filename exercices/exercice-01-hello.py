@@ -1,2 +1,2 @@
 print("Programme deémarré.")
-print("Programme termineé.")
+print("Programme terminé.")
