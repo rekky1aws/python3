@@ -1,6 +1,7 @@
 # exercice-05-strings.py
 
 # exo 5.1
+print("5.1 :")
 # Ajoutez de la documentation à la fonction suivante et vérifiez
 # qu'elle s'affiche correctement en utilisant la fonction help()
 
@@ -12,6 +13,7 @@ def multiplication(a: float, b: float) -> float:
 #help(multiplication)
 
 # exo 5.2
+print(f"\n5.2 :")
 # Trouvez la position de la chaîne de caractères `minim`
 my_text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -19,9 +21,11 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."""
 
 # réponse 5.2
-print("La chaine 'minim' se situe en position %d"%my_text.find("minim"))
+position = my_text.find("minim")
+print(f"La chaine 'minim' se situe en position {position}")
 
 # exo 5.3
+print(f"\n5.3 :")
 # Affectez les caractères de l'index 12 à 20 inclus, de la variable `my_text`, à une autre variable
 # Affichez le résultat ; le résultat devrait être `dolor sit`
 my_text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -39,6 +43,7 @@ print(subtext)
 #print("foo bar baz".split(' '))
 
 # exo 5.4
+print(f"\n5.4 :")
 # Scindez la variable `my_text` en utilisant l'espace comme séparateur et affectez le résultat à une autre variable.
 # Affichez le mot qui se trouve à l'index 5 du tableau ; le résultat devrait être `consectetur`
 my_text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -51,6 +56,7 @@ splitted_text=my_text.split(' ')
 print(splitted_text[5])
 
 # code 5.2
+print(f"\n5.5 : ")
 # En python, un saut de ligne dans une chaîne de caractères peut être obtenu en utilisant un caractère échappé
 my_text1 = "texte\nmulti\nligne"
 # Ou en utilisant une chaîne de caractères multiligne

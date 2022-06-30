@@ -8,12 +8,15 @@
 # Calculez l'âge d'Alice en utilisant les variables `birthyear` et `year` puis stockez le résultat dans une variable nommée `age` et affichez ce résultat.
 birthyear = 1988
 
+print("3.1 :")
+
 # réponse 3.1
 year=2022
 age=year-birthyear
 print(age)
 
 # exo 3.2
+print(f"\n3.2 :")
 # Bob veut distribuer tous ses bonbons et chocolats à ses amis.
 # Il a 15 bonbons, 17 chocolats et 3 amis.
 # Combien de bonbons lui restera-t-il ?
@@ -31,6 +34,7 @@ print(candies_rest)
 print(chocolates_rest)
 
 # exo 3.3
+print(f"\n3.3 :")
 # Suite de l'exercice précédent.
 # Calculez combien de bonbons et chocolats Bob va distribuer par personne et stockez les résultats dans les variables `candies_per_person` et `chocolates_per_person`.
 # Affichez ces résultats.
@@ -39,22 +43,24 @@ print(chocolates_rest)
 # Il y en a un qui va tout de suite vous donner la réponse.
 
 # réponse 3.3
-candies_per_person=candies/friends
-chocolates_per_person=chocolates/friends
+candies_per_person = candies // friends
+chocolates_per_person = chocolates // friends
 
 print(candies_per_person)
 print(chocolates_per_person)
 
 # exo 3.4
+print(f"\n3.4 :")
 # Calculez la moyenne des nombres suivants : 1, 1, 2, 3, 5, 8, 13.
 # Affectez le résultat à une variable et affichez le résultat.
 
 # réponse 3.4
-moyenne=float((1+1+2+3+5+8+13))/7
+moyenne = (1+1+2+3+5+8+13) / 7
 
 print(moyenne)
 
 # exo 3.5
+print(f"\n3.5 :")
 # Alice est en vacance et elle veut suivre ses dépenses quotidiennes.
 # Stockez le montant de chacune de ses dépenses quotidiennes dans une variable différente :
 # - day1 : 26,82
@@ -79,6 +85,7 @@ average=total/days
 print(days,total,average)
 
 # exo 3.6
+print(f"\n3.6 :")
 # La formule suivante permet de convertir des miles en mètres :
 #
 # meters = miles * 1609.344
@@ -96,6 +103,7 @@ km = meters / 1000
 print(round(km))
 
 # exo 3.7
+print(f"\n3.7 :")
 # La formule suivante permet de calculer le montant de la TVA à partir d'un prix « hors TVA » (HTVA) et du taux de la TVA en pourcentage
 #
 # tax_fee = price * tax_rate / 100
@@ -108,10 +116,11 @@ price = 314
 tax_rate = 20
 
 # réponse 3.7
-tax_fee=price*float(tax_rate)/100
+tax_fee=price * tax_rate / 100
 print(tax_fee)
 
 # exo 3.8
+print(f"\n3.8 :")
 # La formule suivante permet de calculer un prix TVA inlcuse à partir du prix HTVA et du taux de TVA en pourcentage
 #
 # tax_included_price = price + price * tax_rate / 100
@@ -128,10 +137,11 @@ price = 271
 tax_rate = 20
 
 # réponse 3.8
-tax_included_price = price + price*float(tax_rate)/100
+tax_included_price = price + price * tax_rate / 100
 print(tax_included_price)
 
 # exo 3.9
+print(f"\n3.9")
 # Charly fait ses courses.
 # Il compare le prix de deux marques différentes de chocolat.
 # La première marque propose une tablette à 1,79 euros (pour 120 g).

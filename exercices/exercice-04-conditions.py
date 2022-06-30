@@ -3,6 +3,7 @@
 import random
 
 # code 4.1
+print("4.1 :")
 # la fonction `random.randint()` permet de tirer un nombre entier au hasard
 # affectaction d'un nombre entier entre 0 et 99 à la variable number
 number = random.randint(0, 99)
@@ -24,6 +25,7 @@ else:
     print("le nombre est différent de 1")
 
 # code 4.2
+print(f"\n4.2 :")
 # si 10 est un nombre pair, le modulo de 2 est égal à zéro
 print(10 % 2)
 # si 21 est un nombre impair, le modulo de 2 n'est pas égal à zéro (il est égal à 1)
@@ -45,6 +47,7 @@ else:
     print("le nombre est impair")
 
 # exo 4.3
+print(f"\n4.3 :")
 # Écrivez un bloc if qui affiche
 # - "le nombre est divisible par 3" si la variable number est divisible par 3
 # - "le nombre n'est pas divisible par 3" sinon
@@ -60,6 +63,7 @@ else:
     print("le nombre n'est pas divisible par 3")
 
 # exo 4.4
+print(f"\n4.4 :")
 # écrivez un bloc if qui affiche
 # - "le nombre est supérieur ou égal à 5" si la variable number contient une valeur plus grande ou égale à 5
 # - "le nombre est inférieur à 5" si la variable number ne contient pas de valeur plus grande ou égale à 5
@@ -75,6 +79,7 @@ else:
     print("le nombre est supérieur ou égal à 5")
 
 # exo 4.5
+print(f"\n4.5 :")
 # écrivez un bloc if qui affiche
 # - "le nombre est compris entre 0 et 49 inclus" si la variable number contient une valeur comprise entre 0 et 49
 # - "le nombre n'est pas compris entre 0 et 49 inclus" si la variable number ne contient pas de valeur comprise entre 0 et 49
@@ -84,12 +89,13 @@ number = random.randint(0, 99)
 print(number)
 
 # réponse 4.5
-if number<0 or number>49:
-    print("le nombre n'est pas compris entre 0 et 49 inclus")
-else:
+if 0 > number > 49:
     print("le nombre est compris entre 0 et 49 inclus")
+else:
+    print("le nombre n'est pas compris entre 0 et 49 inclus")
 
 # exo 4.6
+print(f"\n4.6 :")
 # écrivez un bloc if qui affiche
 # - "le nombre est compris entre 0 et 33 inclus" si la variable number contient une valeur comprise entre 0 et 33
 # - "le nombre est compris entre 34 et 66 inclus" si la variable number contient une valeur comprise entre 34 et 66
@@ -100,14 +106,15 @@ number = random.randint(0, 99)
 print(number)
 
 # réponse 4.6
-if number<=33:
+if 0 <= number <= 33:
     print("le nombre est compris entre 0 et 33 inclus")
-elif number<=66:
+elif number <= 66:
     print("le nombre est compris entre 34 et 66 inclus")
 else:
     print("le nombre n'est pas compris entre 0 et 66 inclus")
 
 # exo 4.7
+print(f"\n4.7 :")
 # écrivez un bloc if qui affiche
 # - "le nombre a est supérieur au nombre b" si la variable a contient une valeur plus grande que celle de la variable b
 # - "le nombre a est inférieur au nombre b" si la variable a contient une valeur plus petite que celle de la variable b
@@ -129,7 +136,8 @@ elif a<b:
 else:
     print("le nombre a et le nombre b sont égaux")
 
-# code 4.3
+# code 4.8
+print(f"\n 4.8 :")
 # affichage d'une variable avec une f-string
 number = 42
 #print(f"number : {number}")

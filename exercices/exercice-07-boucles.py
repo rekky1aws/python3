@@ -138,9 +138,9 @@ print(count,"\n")
 
 # réponse 7.12
 count=0
-for i in range(33):
+for i in range(100):
     r=random.randint(1,10)
-    if r>=7:
+    if 2 <= r <= 9:
         count+=1
 print(count,"\n")
 
@@ -149,11 +149,9 @@ print(count,"\n")
 
 # réponse 7.13
 count=0
-for i in range(33):
-    r=random.randint(1,10)
-    if r>=7:
-        count+=1
-print(count,"\n")
+for i in range(1, 100):
+    if(i % 2 == 0):
+        print(i, end=" ")
 
 # exo 7.14
 # en utilisant une boucle for, affichez tous les nombre pairs, de 1 à 100 inclus

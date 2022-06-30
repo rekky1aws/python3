@@ -50,21 +50,21 @@ class User:
 
 # réponse 12.2
 
-user1 = User('Joe','Dalton','joe.dalton@example.com',True)
-user2 = User('William','Dalton','william.dalton@example.com',False)
-user3 = User('Jack','Dalton','jack.dalton@example.com',False)
-user4 = User('Averell','Dalton','averell.dalton@example.com',True)
+user1 = User('Joe', 'Dalton', 'joe.dalton@example.com', True)
+user2 = User('William', 'Dalton', 'william.dalton@example.com', False)
+user3 = User('Jack', 'Dalton', 'jack.dalton@example.com', False)
+user4 = User('Averell', 'Dalton', 'averell.dalton@example.com', True)
 
 # exo 12.3
 # Ajoutez chacune des instances de la classe `User` à une liste nommée `users`
 # Utilisez une boucle `for` (type `foreach`) pour afficher le nom complet et l'email de chaque utilisateur s'il est abonné à la newsletter (c-à-d si newsletter == True)
 
 # réponse 12.3
-users=[user1,user2,user3,user4]
+users = [user1, user2, user3, user4]
 for u in users:
-	print("Prénom :",u.firstname)
-	print("Nom :", u.lastname)
-	print("E-mail :", u.email)
+	print(f"Prénom : {u.firstname}")
+	print(f"Nom : {u.lastname}")
+	print(f"E-mail : {u.email}")
 	if u.newsletter:
 		print("Abonné à la newsletter")
 	else:
@@ -90,20 +90,20 @@ class ProductLorem:
 	_price=0.0
 
 	def __init__(self, name, price):
-		self.name=name
-		self.price=price
+		self.set_name(name)
+		self.set_price(price)
 
 	def get_name(self):
-		return self.name
+		return self._name
 
 	def set_name(self, name):
-		self.name=name
+		self._name = name
 
 	def get_price(self):
-		return self.price
+		return self._price
 
 	def set_price(self, price):
-		self.price=price
+		self._price = price
 
 
 # exo 12.5
@@ -119,9 +119,19 @@ class ProductLorem:
 #   - price: 16,18
 
 # réponse 12.5
-product1=ProductLorem('Foo',31.41)
-product2=ProductLorem('Bar',27.18)
-product3=ProductLorem('Baz',16.18)
+product1 = ProductLorem(None, None)
+product1.set_name("Foo")
+product1.set_price(31.41)
+
+product2 = ProductLorem(None, None)
+product2.set_name("Bar")
+product2.set_price(27.18)
+
+product3 = ProductLorem(None, None)
+product3.set_name("Baz")
+product3.set_price(16.18)
+
+
 
 # exo 12.6
 # Ajoutez chacune des instances de la classe `ProductLorem` à une liste nommée `products`
@@ -129,13 +139,13 @@ product3=ProductLorem('Baz',16.18)
 # Calculez la somme du prix des produits et affichez-en un arrondi à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.6
-products=[product1,product2,product3]
-somme=0
+products = [product1, product2, product3]
+somme = 0
 for p in products:
 	print("Nom :", p.get_name())
 	print("Prix :", p.get_price())
 	print()
-	somme+=p.price
+	somme += p.get_price()
 print("Somme des prix :", round(somme,2))
 
 # exo 12.7
@@ -162,29 +172,34 @@ class ProductIpsum:
 	_price = 0.0
 	_tax=0.0
 
-	def __init__(self, name, price, tax):
+	def __init__(self, name, price = 0.0, tax = 0.0):
 		self.name=name
 		self.price=price
 		self.tax=tax
 
-	def get_name(self):
+	def get_name (self):
 		return self.name
 
-	def set_name(self, name):
+	def set_name (self, name):
 		self.name=name
 
-	def get_price(self):
+	def get_price (self):
 		return self.price
 
-	def set_price(self, price):
+	def set_price (self, price):
 		self.price=price
 
-	def get_tax(self):
+	def get_tax (self):
 		return self.tax
 
-	def set_tax(self, tax):
+	def set_tax (self, tax):
 		self.tax=tax
 
+	def get_tax_fee (self) :
+		return self.get_tax() / 100 * self.get_price()
+
+	def get_tax_included (self):
+		return self.get_price() + self.get_tax_fee()
 
 # exo 12.8
 # Créez 3 instances de la classe `ProductIpsum` et affectez les valeurs suivantes à ses attributs en utilisant le constructeur :
@@ -202,9 +217,9 @@ class ProductIpsum:
 #   - tax: 5.5
 
 # réponse 12.8
-product1=ProductIpsum('Dolor',31.41,20.0)
-product2=ProductIpsum('Sit',27.18,10.0)
-product3=ProductIpsum('Amet',16.18,5.5)
+product1 = ProductIpsum('Dolor', 31.41, 20.0)
+product2 = ProductIpsum('Sit', 27.18, 10.0)
+product3 = ProductIpsum('Amet', 16.18, 5.5)
 
 # exo 12.9
 # Ajoutez chacune des instances de la classe `ProductIpsum` à une liste nommée `products`
@@ -216,14 +231,14 @@ product3=ProductIpsum('Amet',16.18,5.5)
 # Et affichez-en des arrondis à 2 chiffres après la virgule, après la boucle `for`
 
 # réponse 12.9
-products=[product1,product2,product3]
-sommeHT=0
-sommeTax=0
-sommeTTC=0
+products = [product1, product2, product3]
+sommeHT = 0
+sommeTax = 0
+sommeTTC = 0
 for p in products:
-	sommeHT+=p.get_price()
-	sommeTax+=p.get_tax()/100*p.get_price()
-	sommeTTC+=p.get_price()*(1+(p.get_tax()/100))
+	sommeHT += p.get_price()
+	sommeTax += p.get_tax_fee()
+	sommeTTC += p.get_tax_included()
 print("Somme HT :", round(sommeHT, 2))
 print("Somme des taxes :", round(sommeTax, 2))
 print("Somme TTC :", round(sommeTTC, 2))

@@ -3,6 +3,7 @@
 '''Exercice numéro 2'''
 
 # exo 2.1
+print("2.1 :")
 # Affectez :
 # - le nombre 42 à une variable
 # - le nombre d'or 1,61 à une variable
@@ -12,11 +13,11 @@
 # Affichez ces variables
 
 # réponse 2.1
-NOMBRE=42
-NOMBRE_DOR=1.61
-NOM_PRENOM="HOCHART Donatien"
-MATIN=bool(True)
-VAL_NULL=None
+NOMBRE = 42
+NOMBRE_DOR = 1.61
+NOM_PRENOM = "HOCHART Donatien"
+MATIN = True
+VAL_NULL = None
 
 # code 2.1
 # la fonction `round()` permet d'arrondir un float en un integer
@@ -29,6 +30,7 @@ print(round(0.9))
 print(round(1 / 3, 4))
 
 # exo 2.2
+print(f"\n2.2 :")
 # Stockez le valeurs suivantes dans une variable et transtypez-les :
 # - integer 2 en un float
 # - float 1,62 en un integer
@@ -37,17 +39,17 @@ print(round(1 / 3, 4))
 # À chaque fois stockez le résultat dans une variable et affichez le résultat.
 
 # réponse 2.2
-NA=2
-NB=1.62
-NC=1.62
-ND=1.62
+NA = 2
+NB = 1.62
+NC = 1.62
+ND = 1.62
 
-tna=float(NA)
-TNB=int(NB)
-tnc=int(round(NC))
-tnd=round(ND, 1)
+TNA = float(NA)
+TNB = int(NB)
+TNC = int(round(NC))
+TND = round(ND, 1)
 
-print(NA, "->", tna)
+print(NA, "->", TNA)
 print(NB, "->", TNB)
-print(NC, "->", tnc)
-print(ND, "->", tnd)
+print(NC, "->", TNC)
+print(ND, "->", TND)

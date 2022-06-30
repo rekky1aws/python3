@@ -22,7 +22,7 @@ print(my_sum(3,39))
 # Appelez la fonction et affichez le résultat
 
 # réponse 10.2
-def my_diff(a: int, b: int):
+def my_diff(a: int, b: int) -> int:
     return int(a-b)
 
 print(my_diff(3,39))
@@ -36,7 +36,7 @@ print(my_diff(3,39))
 # Appelez la fonction avec la valeur False et affichez le résultat
 
 # réponse 10.3
-def oui_non(p: bool):
+def oui_non(p: bool) -> str:
     if p:
         return "oui"
     else:
@@ -53,11 +53,11 @@ print(oui_non(False))
 # Appelez la fonction et affichez le résultat
 
 # réponse 10.4
-def is_greater(a: float, b: float):
-    return bool(a>b)
+def is_greater(a: float, b: float) -> bool:
+    return a > b
 
-print(is_greater(2,3.4))
-print(is_greater(1,0.98))
+print(is_greater(2, 3.4))
+print(is_greater(1, 0.98))
 
 # exo 10.5
 # Créer une fonction nommée `compare()` qui :
@@ -103,10 +103,10 @@ print(compare(6,6))
 
 # réponse 10.6
 def meters_to_miles(meters: float):
-    return meters*1609.344
+    return meters/1609.344
 
 def miles_to_meters(miles: float):
-    return miles/1609.344
+    return miles*1609.344
 
 print("1km =",meters_to_miles(1000),"miles")
 print("10 miles =", miles_to_meters(10),"m")

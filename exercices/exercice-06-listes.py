@@ -26,11 +26,11 @@ my_list.append("chaine à la fin")
 print(my_list)
 
 # exo 6.4
-# Supprimez l'élément qui se trouve en deuxièm position de la liste et affichez le résultat
+# Supprimez l'élément qui se trouve en deuxième position de la liste et affichez le résultat
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.4
-my_list.pop()
+my_list.pop(1)
 print(my_list)
 
 # exo 6.5
@@ -46,7 +46,8 @@ print(my_list)
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # réponse 6.6
-print("Longueur de la liste : %d"%len(my_list))
+print(f"Longueur de la liste : {len(my_list)}")
+print(f"Longueur de la liste : {len(my_list)}")
 
 # exo 6.7
 # Inversez la position des valeurs `bar` et `lorem` puis affichez le résultat
@@ -63,8 +64,8 @@ print(my_list)
 my_list = ['foo', 'bar', 'baz', 'lorem', 'ipsum']
 
 # Si on ne sait pas où se situent nos entrées
-a=my_list.index('bar')
-b=my_list.index('lorem')
+a = my_list.index('bar')
+b = my_list.index('lorem')
 
 # print(a, my_list[a], b, my_list[b]) # Pour afficher les index et les valeurs qui vont etre echangées
 
@@ -115,7 +116,17 @@ print("Moyenne : ",somme/len(my_list))
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.11
-print("L'index de 3.14 dans my_list est : ",my_list.index(3.14))
+def find_position (array, value):
+    index = 0
+    while(array[index] != value):
+        if(index >= len(array)):
+            return None
+        index += 1
+    return index
+
+position = find_position(my_list, 3.14)
+print(position)
+print(f"L'index de 3.14 dans my_list est : {position}")
 
 # exo 6.12
 # Comptez les nombres plus petits ou égaux à 10 dans la liste et affichez le résultat
@@ -177,8 +188,23 @@ print(my_list)
 my_list = [2.71, 42, 123, 2, 3.14, 1.61]
 
 # réponse 6.16
-my_list.sort()
-print(my_list)
+def bubble_sort (tab):
+    moved = True
+    i = 0
+    while(moved and (i < len(tab) - 1)):
+        moved = False
+        for j in range(len(tab)-1-i):
+            if( tab[j] > tab[j+1] ):
+                storage_var = tab[j]
+                tab[j] = tab[j+1]
+                tab[j+1] = storage_var
+                moved = True
+        i += 1
+    return tab
+
+my_sorted_list = bubble_sort(my_list)
+
+print(my_sorted_list)
 
 # code 6.1
 # Lire la valeur de la ligne `m` et de la colonne `n` d'un tableau en 2 dimensions
